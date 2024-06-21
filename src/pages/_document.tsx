@@ -57,13 +57,18 @@ class MyDocument extends Document<MyDocumentProps> {
             src='https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js'
             strategy='beforeInteractive'
           />
-          <Script
-            src="https://cdn.jsdelivr.net/npm/eruda"
-            strategy="afterInteractive"
-            onLoad={() => {
-              if (typeof eruda !== "undefined") {
-                eruda.init();
-              }
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                document.addEventListener('DOMContentLoaded', function () {
+                  var script = document.createElement('script');
+                  script.src = 'https://cdn.jsdelivr.net/npm/eruda';
+                  script.onload = function () {
+                    eruda.init();
+                  };
+                  document.body.appendChild(script);
+                });
+              `,
             }}
           />
         </body>
