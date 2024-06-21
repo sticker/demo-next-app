@@ -23,6 +23,7 @@ const wagmiOptions = {
 };
 
 const env = process.env.NEXT_PUBLIC_ENV;
+console.log('env', env);
 const chains =
   env === 'development' ? ([sepolia] as const) : ([mainnet] as const);
 
