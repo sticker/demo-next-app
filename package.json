@@ -9,9 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.40.0",
+    "@types/webfontloader": "^1.6.38",
+    "@web3modal/react": "^2.7.1",
+    "@web3modal/wagmi": "^4.2.2",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.4"
+    "next": "14.2.4",
+    "react-icons": "^5.2.1",
+    "react-toastify": "^10.0.5",
+    "viem": "^2.13.1",
+    "wagmi": "^2.9.7",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "typescript": "^5",
